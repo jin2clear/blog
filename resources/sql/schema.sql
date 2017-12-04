@@ -9,8 +9,9 @@ CREATE TABLE _article(
   `article_title` VARCHAR(50) NOT NULL COMMENT '文章标题',
   `article_content` TEXT NOT NULL COMMENT '文章正文',
   `article_image` VARCHAR(511) COMMENT '文章图片',
+  `create_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `read_count` INT NOT NULL DEFAULT 0 COMMENT '阅读次数',
-  `tag` BIGINT NOT NULL,
+  `tag` SMALLINT NOT NULL,
   PRIMARY KEY (`article_id`),
   KEY 'idx_article_id'(`article_id`)
 )ENGINE = INNODB AUTO_INCREMENT = 1000 DEFAULT CHARSET = UTF8 COMMENT = '文章表';

@@ -33,10 +33,12 @@ public class BindingResultAop {
                 bindingResult = (BindingResult) arg;
             }
         }
-        if (bindingResult.hasErrors()) {
-            String errorInfo = "[" + bindingResult.getFieldError().getField() + "]"
-                    + bindingResult.getFieldError().getDefaultMessage();
-            return new BaseResult<Object>(false, errorInfo);
+        if(null != bindingResult){
+            if (bindingResult.hasErrors()) {
+                String errorInfo = "[" + bindingResult.getFieldError().getField() + "]"
+                        + bindingResult.getFieldError().getDefaultMessage();
+                return new BaseResult<>(false, errorInfo);
+            }
         }
         return joinPoint.proceed();
     }
