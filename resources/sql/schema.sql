@@ -11,7 +11,7 @@ CREATE TABLE _article(
   `article_image` VARCHAR(511) COMMENT '文章图片',
   `create_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `read_count` INT NOT NULL DEFAULT 0 COMMENT '阅读次数',
-  `tag` SMALLINT NOT NULL,
+  `tag_id` SMALLINT NOT NULL,
   PRIMARY KEY (`article_id`),
   KEY 'idx_article_id'(`article_id`)
 )ENGINE = INNODB AUTO_INCREMENT = 1000 DEFAULT CHARSET = UTF8 COMMENT = '文章表';

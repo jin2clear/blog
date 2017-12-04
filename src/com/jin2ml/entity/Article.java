@@ -20,7 +20,7 @@ public class Article {
 
     private Integer readCount;
 
-    private Integer tag;
+    private Integer tagID;
 
     public long getArticleId() {
         return articleId;
@@ -62,12 +62,12 @@ public class Article {
         this.readCount = readCount;
     }
 
-    public Integer getTag() {
-        return tag;
+    public Integer getTagID() {
+        return tagID;
     }
 
-    public void setTag(Integer tag) {
-        this.tag = tag;
+    public void setTagID(Integer tagID) {
+        this.tagID = tagID;
     }
 
     public Date getCreateTime() {
@@ -87,7 +87,7 @@ public class Article {
                 ", articleImage='" + articleImage + '\'' +
                 ", createTime=" + createTime +
                 ", readCount=" + readCount +
-                ", tag=" + tag +
+                ", tagID=" + tagID +
                 '}';
     }
 }
